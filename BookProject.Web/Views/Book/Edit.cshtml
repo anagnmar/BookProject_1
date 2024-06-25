@@ -1,0 +1,103 @@
+﻿@model Book
+
+@*<h1> Create Book </h1>*@
+
+
+@* <div>
+ *@
+<form method="post">
+
+	<div class="border p-3 mt-4">
+
+		<div class="row pb-2">
+			<h2 class="text-primary">Edit Book</h2>
+			<hr>
+		</div>
+
+		<div asp-validation-summary="ModelOnly"></div>
+		@* <div asp-validation-summary="All"></div> *@
+
+		<div class="mb-3 row p-1">
+			<label class="p-0">Book Title</label>
+			<input asp-for="Title" type="text" class="form-control" />
+			<span asp-validation-for="Title" class="text-danger"></span>
+		</div>
+		<div class="mb-3 row p-1">
+			<label class="p-0">Book Author</label>
+			<input asp-for="Author" type="text" class="form-control" />
+			<span asp-validation-for="Author" class="text-danger"></span>
+		</div>
+		<div class="mb-3 row p-1">
+			<label class="p-0">Book Genre</label>
+			<input asp-for="Genre" type="text" class="form-control" />
+			<span asp-validation-for="Genre" class="text-danger"></span>
+		</div>
+		<div class="mb-3 row p-1">
+			<label class="p-0">Book ISBN</label>
+			<input asp-for="ISBN" type="text" class="form-control" />
+			<span asp-validation-for="ISBN" class="text-danger"></span>
+		</div>
+
+		<div class="row">
+			<div class="col-6">
+				<button type="submit" class="btn btn-primary form-control">Edit Book</button>
+			</div>
+			<div class="col-6">
+				<a asp-controller="Book" asp-action="Index" class="btn btn-secondary form-control">
+					Back to List
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+
+</form>
+
+
+@*	Client side Validation	*@
+
+@section Scripts {
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
